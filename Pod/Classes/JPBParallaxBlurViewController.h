@@ -26,6 +26,11 @@
 
 @property (nonatomic) UIScrollView *mainScrollView;
 
+@property (nonatomic) NSLayoutConstraint *mainScrollViewTopToSuperViewConstraint;
+@property (nonatomic) NSLayoutConstraint *mainScrollViewBottomToSuperViewConstraint;
+@property (nonatomic) NSLayoutConstraint *mainScrollViewLeftToSuperViewConstraint;
+@property (nonatomic) NSLayoutConstraint *mainScrollViewRightToSuperViewConstraint;
+
 @end
 
 ///-------------------------------------------------------------------------------------------------------

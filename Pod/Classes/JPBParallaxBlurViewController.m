@@ -114,6 +114,7 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     [self setNeedsScrollViewAppearanceUpdate];
 }
 
+
 - (void)updateViewConstraints {
     
     [super updateViewConstraints];
@@ -127,8 +128,15 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     
     views[@"mainScrollView"] = self.mainScrollView;
     
-    [constraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[mainScrollView]-0-|" options:0 metrics:nil views:views]];
-    [constraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[mainScrollView]-0-|" options:0 metrics:nil views:views]];
+    self.mainScrollViewTopToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[mainScrollView]" options:0 metrics:nil views:views] firstObject];
+    self.mainScrollViewBottomToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[mainScrollView]-0-|" options:0 metrics:nil views:views] firstObject];
+    self.mainScrollViewLeftToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[mainScrollView]" options:0 metrics:nil views:views] firstObject];
+    self.mainScrollViewRightToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:[mainScrollView]-0-|" options:0 metrics:nil views:views] firstObject];
+    
+    [constraints addObjectsFromArray:@[self.mainScrollViewTopToSuperViewConstraint,
+                                       self.mainScrollViewBottomToSuperViewConstraint,
+                                       self.mainScrollViewLeftToSuperViewConstraint,
+                                       self.mainScrollViewRightToSuperViewConstraint]];
     
     [self.view addConstraints:constraints];
     
