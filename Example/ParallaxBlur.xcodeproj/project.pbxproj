@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2FEA8204FC254DDA948F672D /* libPods-ParallaxBlur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C2828351AF479C837BB38A /* libPods-ParallaxBlur.a */; };
+		368068021A4AE9E300DDD7CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368068011A4AE9E300DDD7CC /* LaunchScreen.xib */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		05B20A197B0A467B97472543 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25175DF437024927A43A8F3C /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = "<group>"; };
+		368068011A4AE9E300DDD7CC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		54C25E9FC8C34AA287F55684 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		56AE53E40AD24FB588540B6D /* ParallaxBlur.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ParallaxBlur.podspec; path = ../ParallaxBlur.podspec; sourceTree = "<group>"; };
 		57A076E32CA64AD09474D7B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				6003F59D195388D20070C39A /* JPBAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
 				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
+				368068011A4AE9E300DDD7CC /* LaunchScreen.xib */,
 				6003F5A5195388D20070C39A /* JPBViewController.h */,
 				6003F5A6195388D20070C39A /* JPBViewController.m */,
 				D85B254819ACE9D000C8F2AA /* CustomHeaderViewController.h */,
@@ -279,6 +282,7 @@
 				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
+				368068021A4AE9E300DDD7CC /* LaunchScreen.xib in Resources */,
 				D86AEC5719A7C61B00D714AA /* meatballs.jpeg in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				D85B254C19ACEA3400C8F2AA /* awesome.jpg in Resources */,
