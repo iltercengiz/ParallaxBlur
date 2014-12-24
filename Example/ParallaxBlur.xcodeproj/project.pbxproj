@@ -42,11 +42,13 @@
 
 /* Begin PBXFileReference section */
 		05B20A197B0A467B97472543 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		25175DF437024927A43A8F3C /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = "<group>"; };
+		066685747BB8484A3B499D22 /* Pods-ParallaxBlur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxBlur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParallaxBlur/Pods-ParallaxBlur.debug.xcconfig"; sourceTree = "<group>"; };
 		368068011A4AE9E300DDD7CC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		54C25E9FC8C34AA287F55684 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		56AE53E40AD24FB588540B6D /* ParallaxBlur.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ParallaxBlur.podspec; path = ../ParallaxBlur.podspec; sourceTree = "<group>"; };
 		57A076E32CA64AD09474D7B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5DD5E1295A0FB71B9D6F79CD /* Pods-ParallaxBlur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxBlur.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParallaxBlur/Pods-ParallaxBlur.release.xcconfig"; sourceTree = "<group>"; };
+		5FE2D8342975CC5D1A2A6DE2 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ParallaxBlur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxBlur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,11 +70,11 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		CF6059F037494BF2A04110BD /* Pods-ParallaxBlur.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxBlur.xcconfig"; path = "Pods/Pods-ParallaxBlur.xcconfig"; sourceTree = "<group>"; };
 		D85B254819ACE9D000C8F2AA /* CustomHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderViewController.h; sourceTree = "<group>"; };
 		D85B254919ACE9D000C8F2AA /* CustomHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderViewController.m; sourceTree = "<group>"; };
 		D85B254B19ACEA3400C8F2AA /* awesome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awesome.jpg; sourceTree = "<group>"; };
 		D86AEC5619A7C61B00D714AA /* meatballs.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meatballs.jpeg; sourceTree = "<group>"; };
+		E8F854FDF27034F3CF2B6B8B /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F6C2828351AF479C837BB38A /* libPods-ParallaxBlur.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParallaxBlur.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DBADE0AD52F898C4FF769F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				066685747BB8484A3B499D22 /* Pods-ParallaxBlur.debug.xcconfig */,
+				5DD5E1295A0FB71B9D6F79CD /* Pods-ParallaxBlur.release.xcconfig */,
+				5FE2D8342975CC5D1A2A6DE2 /* Pods-Tests.debug.xcconfig */,
+				E8F854FDF27034F3CF2B6B8B /* Pods-Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -109,8 +122,7 @@
 				6003F593195388D20070C39A /* ParallaxBlur */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				CF6059F037494BF2A04110BD /* Pods-ParallaxBlur.xcconfig */,
-				25175DF437024927A43A8F3C /* Pods-Tests.xcconfig */,
+				0DBADE0AD52F898C4FF769F8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -327,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-ParallaxBlur-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParallaxBlur/Pods-ParallaxBlur-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F284CA2D05E41788921CE5C /* Check Pods Manifest.lock */ = {
@@ -357,7 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -502,7 +514,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF6059F037494BF2A04110BD /* Pods-ParallaxBlur.xcconfig */;
+			baseConfigurationReference = 066685747BB8484A3B499D22 /* Pods-ParallaxBlur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -516,7 +528,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF6059F037494BF2A04110BD /* Pods-ParallaxBlur.xcconfig */;
+			baseConfigurationReference = 5DD5E1295A0FB71B9D6F79CD /* Pods-ParallaxBlur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -530,7 +542,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25175DF437024927A43A8F3C /* Pods-Tests.xcconfig */;
+			baseConfigurationReference = 5FE2D8342975CC5D1A2A6DE2 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ParallaxBlur.app/ParallaxBlur";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -553,7 +565,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25175DF437024927A43A8F3C /* Pods-Tests.xcconfig */;
+			baseConfigurationReference = E8F854FDF27034F3CF2B6B8B /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ParallaxBlur.app/ParallaxBlur";
 				FRAMEWORK_SEARCH_PATHS = (
