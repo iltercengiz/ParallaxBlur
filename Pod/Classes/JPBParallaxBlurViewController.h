@@ -24,6 +24,8 @@
 
 @property (weak, nonatomic, readwrite) id <JPBParallaxBlurInteractionsDelegate> interactionsDelegate;
 
+@property (nonatomic) UIScrollView *mainScrollView;
+
 @end
 
 ///-------------------------------------------------------------------------------------------------------
