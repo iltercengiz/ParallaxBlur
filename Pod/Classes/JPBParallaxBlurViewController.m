@@ -29,7 +29,10 @@ static CGFloat BLUR_DISTANCE = 200.0f;
 static CGFloat HEADER_HEIGHT = 60.0f;
 static CGFloat IMAGE_HEIGHT = 320.0f;
 
--(void)viewDidLoad{
+#pragma mark - View life cycle
+
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     _headerOverlayViews = [NSMutableArray array];
@@ -41,7 +44,7 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     self.mainScrollView.alwaysBounceVertical = YES;
     self.mainScrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1000);
     self.mainScrollView.showsVerticalScrollIndicator = YES;
-//    self.mainScrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.mainScrollView.translatesAutoresizingMaskIntoConstraints = NO;
     self.mainScrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.mainScrollView.autoresizesSubviews = YES;
     
@@ -97,10 +100,14 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     
     [self.mainScrollView addSubview:_scrollViewContainer];
     
+    /*** contentView ***/
     _contentView = [self contentView];
     _contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 //    _contentView.translatesAutoresizingMaskIntoConstraints = NO;
     [_scrollViewContainer addSubview:_contentView];
+    
+    // Add constraints
+    [self addConstraints];
     
 }
 
@@ -109,15 +116,14 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     [_contentView setFrame:CGRectMake(0, 0, CGRectGetWidth(_scrollViewContainer.frame), CGRectGetHeight(self.view.frame) - [self offsetHeight] )];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self setNeedsScrollViewAppearanceUpdate];
 }
 
+#pragma mark - Layout
 
-- (void)updateViewConstraints {
-    
-    [super updateViewConstraints];
+- (void)addConstraints {
     
     NSMutableArray *constraints;
     NSMutableDictionary *views;
@@ -127,9 +133,11 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     views = [NSMutableDictionary dictionary];
     
     views[@"mainScrollView"] = self.mainScrollView;
+    views[@"topLayoutGuide"] = self.topLayoutGuide;
+    views[@"bottomLayoutGuide"] = self.bottomLayoutGuide;
     
-    self.mainScrollViewTopToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[mainScrollView]" options:0 metrics:nil views:views] firstObject];
-    self.mainScrollViewBottomToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[mainScrollView]-0-|" options:0 metrics:nil views:views] firstObject];
+    self.mainScrollViewTopToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-0-[mainScrollView]" options:0 metrics:nil views:views] firstObject];
+    self.mainScrollViewBottomToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[mainScrollView]-0-[bottomLayoutGuide]" options:0 metrics:nil views:views] firstObject];
     self.mainScrollViewLeftToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[mainScrollView]" options:0 metrics:nil views:views] firstObject];
     self.mainScrollViewRightToSuperViewConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:[mainScrollView]-0-|" options:0 metrics:nil views:views] firstObject];
     
@@ -211,16 +219,23 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
 
 - (void)setNeedsScrollViewAppearanceUpdate {
     self.mainScrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), _contentView.contentSize.height + CGRectGetHeight(_backgroundScrollView.frame));
+//    if (self.navigationController && !self.navigationController.navigationBarHidden) {
+//        UIEdgeInsets insets = UIEdgeInsetsMake([self navBarHeight], 0.0, 0.0, 0.0);
+//        self.mainScrollView.contentInset = insets;
+//        self.mainScrollView.scrollIndicatorInsets = insets;
+//    }
 }
 
-- (CGFloat)navBarHeight{
-    if (self.navigationController && !self.navigationController.navigationBarHidden) {
-        return CGRectGetHeight(self.navigationController.navigationBar.frame) + 20; //include 20 for the status bar
-    }
+#pragma mark - Helpers
+
+- (CGFloat)navBarHeight {
+//    if (self.navigationController && !self.navigationController.navigationBarHidden) {
+//        return CGRectGetHeight(self.navigationController.navigationBar.frame) + 20; //include 20 for the status bar
+//    }
     return 0.0f;
 }
 
-- (CGFloat)offsetHeight{
+- (CGFloat)offsetHeight {
     return HEADER_HEIGHT + [self navBarHeight];
 }
 
@@ -265,19 +280,19 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     
 }
 
-- (UIScrollView*)contentView {
+- (UIScrollView *)contentView {
     UIScrollView *contentView = [[UIScrollView alloc] initWithFrame:CGRectZero];
     contentView.scrollEnabled = NO;
     return contentView;
 }
 
-- (void)setHeaderImage:(UIImage*)headerImage {
+- (void)setHeaderImage:(UIImage *)headerImage {
     _originalImageView = headerImage;
     [_headerImageView setImage:headerImage];
     [_blurredImageView setImage:[headerImage blurredImageWithRadius:40.0f iterations:4 tintColor:[UIColor clearColor]]];
 }
 
-- (void)addHeaderOverlayView:(UIView*)overlay {
+- (void)addHeaderOverlayView:(UIView *)overlay {
     [_headerOverlayViews addObject:overlay];
     [_floatingHeaderView addSubview:overlay];
 }
@@ -286,7 +301,7 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     return CGRectGetHeight(_backgroundScrollView.frame);
 }
 
-- (IBAction)headerImageTapped:(UITapGestureRecognizer*)tapGesture {
+- (IBAction)headerImageTapped:(UITapGestureRecognizer *)tapGesture {
     if ([self.interactionsDelegate respondsToSelector:@selector(didTapHeaderImageView:)]) {
         [self.interactionsDelegate didTapHeaderImageView:_headerImageView];
     }
