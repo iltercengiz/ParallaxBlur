@@ -25,6 +25,7 @@
 @property (weak, nonatomic, readwrite) id <JPBParallaxBlurInteractionsDelegate> interactionsDelegate;
 
 @property (nonatomic) UIScrollView *mainScrollView;
+@property (nonatomic) UIImageView *headerImageView;
 
 @property (nonatomic) NSLayoutConstraint *mainScrollViewTopToSuperViewConstraint;
 @property (nonatomic) NSLayoutConstraint *mainScrollViewBottomToSuperViewConstraint;
