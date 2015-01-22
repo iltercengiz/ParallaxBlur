@@ -121,9 +121,8 @@ static CGFloat IMAGE_HEIGHT = 320.0f;
     [self setNeedsScrollViewAppearanceUpdate];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.mainScrollView.delegate = nil;
+- (void)dealloc {
+    _mainScrollView.delegate = nil;
 }
 
 #pragma mark - Layout

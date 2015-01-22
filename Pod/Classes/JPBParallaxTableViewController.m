@@ -20,6 +20,10 @@
     [super viewDidLoad];
 }
 
+- (void)dealloc {
+    _tableView.delegate = nil;
+}
+
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero];
