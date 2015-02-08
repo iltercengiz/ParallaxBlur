@@ -26,8 +26,8 @@
 
 static CGFloat INVIS_DELTA = 50.0f;
 static CGFloat BLUR_DISTANCE = 200.0f;
-static CGFloat HEADER_HEIGHT = 120.0f; // 60.0f;
-static CGFloat IMAGE_HEIGHT = 320.0f;
+static CGFloat HEADER_HEIGHT = 104.0f; // 60.0f;
+static CGFloat IMAGE_HEIGHT = 296.0f;
 
 #pragma mark - View life cycle
 
