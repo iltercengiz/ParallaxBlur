@@ -1,12 +1,18 @@
 target 'ParallaxBlur', :exclusive => true do
-  pod "ParallaxBlur", :path => "../"
+    
+    pod "ParallaxBlur", :path => "../"
+    
+    pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+    
 end
 
 target 'Tests', :exclusive => true do
-  pod "ParallaxBlur", :path => "../"
-
-  pod 'Specta', '~> 0.2.1'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
+    
+    pod "ParallaxBlur", :path => "../"
+    
+    pod 'Specta'
+    pod 'Expecta'
+    pod 'FBSnapshotTestCase'
+    pod 'Expecta+Snapshots'
+    
 end
